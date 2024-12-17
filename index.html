@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Censo 2023</title>
+        <link rel="icon" href="imgs/favicon.ico">
+    </head>
+    <img src="imgs/logo_censo.svg" height="100px" alt=""> <br> <br>
+<body>
+<div id="index" class="divs">
+    
+    <h3>Bienvenido, seleccione un perfil.</h3>
+    <input type="button" value="Censista" id="btnSlcCensista">
+    <input type="button" value="Invitado" id="btnSlcInvitado">
+</div>
+
+<div id="loginUsuario" class="divs">
+    <h1>Perfil Usuario</h1>
+    <p>Ingrese su CI</p><input type="text" placeholder="2.345.678-9" id="ciInvitado"><br> <br>
+    <button id="btnIngresoInvitado">Ingresar</button>
+    <button id="btnReporteUsuario">Ver reportes</button>   
+    <button id="btnVolverInvitado">Volver atras</button>
+    </div>
+
+
+<div id="datosUsuario" class="divs">
+    <h1>Ingrese sus datos</h1>
+    <p>Nombre</p><input type="text"id="usuNombre">
+    <p>Apellido</p><input type="text" id="usuApellido">
+    <p>Edad</p><input type="text" id="usuEdad">
+    <p>Departamento</p>
+    <select id="slcUsuDepartamento">
+        
+    </select>
+    <p>Ocupacion</p>
+    <select id="slcUsuOcupacion">
+    </select><br>
+    <p id="pCensistaAsignado"></p>
+    <br>
+    <br>
+    <input type="button" id="btnBorrarUsuario" value="Borrar datos">
+    <input type="button" id="btnGuardarUsuario" value="Guardar">
+</div>
+
+<div id="reporteUsuario" class="divs">
+    <h1>Reporte de datos hasta el momento</h1>
+    <div id="tablaReporteUsuario"></div>
+
+    <br><br>
+    <input type="button" id="btnVolverReporteUsuario" value="Ir al inicio">
+</div>
+    
+<!-- ACA ARRANCA CENSISTA -->
+
+<!---------------------------   INICIO LOGUEO CENSISTA --------------------------->
+
+<div id="loginCensista" class="divs">
+
+    <h2>Inicio de sesión</h2>
+
+    <p >Nombre de usuario:</p>
+    <input type="text" placeholder="Luis15" id="txtUsuarioLogin" ></input> <br>
+
+    <p>Contraseña:</p>
+    <input type="password" placeholder="Gran15" id="txtPassLogin"> <br> <br>
+
+    <button id="btnLoginCensista">Ingresar</button>
+    <div id="salidaLogCensista"></div>
+
+<br><br>
+    <button id="btnRegistroCensista">Quiero registrarme</button>
+
+    <button id="btnVolverCensista">Volver atras</button>
+
+    </div>
+
+    <!---------------------------   FIN LOGUEO CENSISTA --------------------------->
+
+
+    <!---------------------------   INICIO REGISTRO CENSISTA --------------------------->
+<div id="registroCensista" class="divs">
+
+<h2>Registro de nuevo censista</h2>
+<br>
+<p>Nombre:</p>
+<input type="text" id="txtNombreCensista"> <br>
+
+<p>Nombre de usuario: </p>
+<input type="text" id="txtUsuario"> <br>
+
+<p>Contraseña: </p>
+<input type="password" id="txtPass"> <br> <br>
+
+<input type="button" value="Registrar" id="btnAgregarCensista">
+<button id="btnGoBackCensista">Volver atras</button> <br>
+
+<div id="salida"></div>
+
+</div>
+
+<!--------------------------- FIN REGISTRO CENSISTA --------------------------->
+
+<div id="menuCensista" class="divs">
+<h1>Bienvenido <span id="nombreUsuarioLogueado"></span></h1>
+<button id="btnIngresarDatosDesdeCensista">Ingresar datos</button>
+<button id="btnReasignarCensista">Reasignar censista</button>
+<button id="btnInfoEstadisticaCensista">Información estadística</button>
+<button id="btnCensistaLogout">Cerrar sesión</button>
+</div>
+        
+<div id="ingresoCedulaDesdeCensista" class="divs">
+    <h1>Validar CI</h1>
+    <p>CI</p>
+    <input type="text" id="txtCedulaDesdeCensista">
+    <button id="btnValidarDesdeCensista">Validar</button>
+    <button id="btnVolverAtrasCI">Volver atrás</button>
+</div>
+
+<div id="ingresarDatosDesdeCensista" class="divs">
+    <h1>Ingrese los datos</h1>
+    <p>Nombre</p><input id="txtNombreUsuCen" type="text">
+    <p>Apellido</p><input id="txtApellidoUsuCen" type="text">
+    <p>Edad</p><input id="txtEdadUsuCen" type="text">
+    <p>Departamento</p>
+    <select id="slcDptoUsuCen">
+        
+    </select>
+    <p>Ocupacion</p>
+    <select id="slcOcupacionUsuCen">
+    </select><br><br>
+    <input type="button" id="btnGuardarYvalidar" value="Guardar y validar">
+    <input type="button" id="btnCancelCensista" value="Cancelar">
+</div>
+
+<div id="menuReasignarCensista" class="divs">
+<h1>Reasignar personal para validar</h1>
+<select id="slcPersonasPorValidar">
+
+</select>
+<select id="slcCensistas">
+
+</select>
+<input type="button" value="Reasignar" id="btnReasignar">
+<input type="button" value="Volver atras" id="btnVolverDeReasignar">
+</div>
+
+<div id="reporteCensista" class="divs">
+<h1>Informacion estadistica</h1>    
+<h1>Censados hasta el momento: <span id="cantidadDeCensados"></span></h1>
+    <table border="1" id="tablaReporteCensista">
+        
+    </table><br>
+    <select id="slcTablaDptos">
+    </select><br>
+    <table border="1" id="tablaDpto">
+        
+    </table>
+    <br><br>
+    <input type="button" id="btnVolverDesdeEstadisticaCencista" value="Volver atras">
+</div> 
+    <script src="js/clases.js"></script>
+    <script src="js/sistema.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/codigo.js"></script>
+</body>
+</html>
